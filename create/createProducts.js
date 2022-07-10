@@ -1,5 +1,4 @@
 const path = require(`path`)
-// const gql = require(`fake-tag`)
 const { paginate } = require(`gatsby-awesome-pagination`)
 const productsTemplate = path.resolve(`./src/templates/Products.js`)
 const productTemplate = path.resolve(`./src/templates/Product.js`)
