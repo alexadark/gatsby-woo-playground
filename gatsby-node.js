@@ -1,9 +1,17 @@
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
+const path = require("path")
+const createProducts = require("./create/createProducts")
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        "~": path.resolve(__dirname, "src/"),
+      },
+      extensions: [".ts", ".tsx", ".js", ".jsx"],
+    },
   })
+}
+
+exports.createPages = async ({ actions, graphql }) => {
+  await createProducts({ actions, graphql })
 }
