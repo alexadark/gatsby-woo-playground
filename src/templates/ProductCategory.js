@@ -4,7 +4,6 @@ import Layout from "~/components/layout"
 import { Pagination } from "~/components/Pagination"
 
 const ProductCategory = ({ data, pageContext }) => {
-  console.log(data)
   const { allWpProduct: products, wpProductCategory: category } = data
 
   return (

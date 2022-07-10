@@ -47,7 +47,7 @@ module.exports = async ({ actions, graphql }) => {
 
   paginate({
     createPage,
-    pathPrefix: "/products",
+    pathPrefix: "/",
     component: productsTemplate,
     items: products,
     itemsPerPage: 4,
